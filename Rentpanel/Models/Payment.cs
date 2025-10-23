@@ -9,7 +9,8 @@ namespace Rentpanel.Models
 {
     internal class Payment : BaseEntity
     {
-
+        public Payment() : base()
+        { }
         public  string OnlinePayment{  get; set; }
         public string GhestiPayment{  get; set; }
         public string FrooshHouzooriPayment { get; set; }

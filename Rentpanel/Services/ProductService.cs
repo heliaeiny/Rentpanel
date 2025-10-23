@@ -8,18 +8,17 @@ using System.Threading.Tasks;
 
 namespace Rentpanel.Services
 {
-    internal class ProductServices : BaseService<Product>
+    internal class ProductService : BaseService<Product>
     { 
 
-        public List<Product> Product { get; set; }
 
-        public void Add(Product product)
-        { 
-
+        public void Add(Product item)
+        {
+            throw new NotImplementedException();
         }
         public List<Product> GetAll()
         {
-            return Product;
+            throw new NotImplementedException();
         }
     }
 }

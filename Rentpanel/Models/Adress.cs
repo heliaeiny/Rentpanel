@@ -4,13 +4,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Rentpanel.Models
 {
     internal class Adress : BaseEntity
     {
-      //  public Adress() : base()
-       // { }
+          public Adress() : base()
+         { }
+        public Adress(string city, string street)
+        {
+            if (string.IsNullOrEmpty(city) || string.IsNullOrEmpty(street))
+            {
+                throw new Exception();
+            }
+
+            City=city;
+            Street=street;
+        }
         public string Alley { get; set; }
         public string PostalCode { get; set;}     
         public string HouseNumber { get; set; }

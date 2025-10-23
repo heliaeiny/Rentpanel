@@ -9,7 +9,7 @@ namespace Rentpanel.Models
 {
     internal class CodeTakhfif : BaseEntity
     {
-      //  public CodeTakhfif() : base()
-       // { }
+       public CodeTakhfif() : base()
+        { }
     }
 }

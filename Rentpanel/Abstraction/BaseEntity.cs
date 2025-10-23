@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Rentpanel.Abstraction
 {
-    public abstract  class BaseEntity
+    internal abstract  class BaseEntity
     {
-      //  public BaseEntity()
+       public BaseEntity()
 
-        //{ 
-          //  CreatedAt = DateTime.Now;
-        
-        //}
+        { 
+           CreatedAt = DateTime.Now;
+            Id = Guid.NewGuid();
+        }
 
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public DateTime CreatedAt { get; set; }
 
     }

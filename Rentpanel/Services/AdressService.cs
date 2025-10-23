@@ -11,19 +11,14 @@ namespace Rentpanel.Services
 {
     internal class AdressService : BaseService<Adress>
     {
-        public void Add(Adress item)
+        List<Adress> adresses = new();
+        public void Add(Adress address)
         {
-           throw new NotImplementedException();
-
+            adresses.Add(address);
         }
-        public void Remove(Adress item) 
-        { 
-        
-        }
-
         public List<Adress> GetAll()
         {
-            throw new NotImplementedException();
+            return adresses;
         }
 
 

@@ -45,7 +45,11 @@
             DeliveryFullNameTtextBox7 = new TextBox();
             DeliveryPhoneNumbereTxtBox8 = new TextBox();
             registerButton = new Button();
-            button2 = new Button();
+            resetrejisterbutton2 = new Button();
+            OrderdataGridView1 = new DataGridView();
+            removebutton1 = new Button();
+            updatebutton2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)OrderdataGridView1).BeginInit();
             SuspendLayout();
             // 
             // ownerTextBox1
@@ -189,21 +193,51 @@
             registerButton.UseVisualStyleBackColor = true;
             registerButton.Click += registerButton_Click;
             // 
-            // button2
+            // resetrejisterbutton2
             // 
-            button2.Location = new Point(455, 241);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 17;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            resetrejisterbutton2.Location = new Point(455, 241);
+            resetrejisterbutton2.Name = "resetrejisterbutton2";
+            resetrejisterbutton2.Size = new Size(75, 23);
+            resetrejisterbutton2.TabIndex = 17;
+            resetrejisterbutton2.Text = "Reset";
+            resetrejisterbutton2.UseVisualStyleBackColor = true;
+            resetrejisterbutton2.Click += resetrejisterbutton2_Click;
+            // 
+            // OrderdataGridView1
+            // 
+            OrderdataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            OrderdataGridView1.Location = new Point(85, 301);
+            OrderdataGridView1.Name = "OrderdataGridView1";
+            OrderdataGridView1.Size = new Size(240, 150);
+            OrderdataGridView1.TabIndex = 18;
+            // 
+            // removebutton1
+            // 
+            removebutton1.Location = new Point(352, 241);
+            removebutton1.Name = "removebutton1";
+            removebutton1.Size = new Size(75, 23);
+            removebutton1.TabIndex = 19;
+            removebutton1.Text = "remove";
+            removebutton1.UseVisualStyleBackColor = true;
+            // 
+            // updatebutton2
+            // 
+            updatebutton2.Location = new Point(226, 241);
+            updatebutton2.Name = "updatebutton2";
+            updatebutton2.Size = new Size(75, 23);
+            updatebutton2.TabIndex = 20;
+            updatebutton2.Text = "update";
+            updatebutton2.UseVisualStyleBackColor = true;
             // 
             // OrderForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
+            Controls.Add(updatebutton2);
+            Controls.Add(removebutton1);
+            Controls.Add(OrderdataGridView1);
+            Controls.Add(resetrejisterbutton2);
             Controls.Add(registerButton);
             Controls.Add(DeliveryPhoneNumbereTxtBox8);
             Controls.Add(DeliveryFullNameTtextBox7);
@@ -223,6 +257,7 @@
             Controls.Add(ownerTextBox1);
             Name = "OrderForm";
             Text = "OrderForm";
+            ((System.ComponentModel.ISupportInitialize)OrderdataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -246,6 +281,9 @@
         private TextBox DeliveryFullNameTtextBox7;
         private TextBox DeliveryPhoneNumbereTxtBox8;
         private Button registerButton;
-        private Button button2;
+        private Button resetrejisterbutton2;
+        private DataGridView OrderdataGridView1;
+        private Button removebutton1;
+        private Button updatebutton2;
     }
 }

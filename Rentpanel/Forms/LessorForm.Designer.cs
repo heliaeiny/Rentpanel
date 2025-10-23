@@ -41,6 +41,13 @@
             userNametextBox5 = new TextBox();
             passwordTextBox = new TextBox();
             rejisterButtonLessor = new Button();
+            reserRejisterutton1 = new Button();
+            LessordataGridView1 = new DataGridView();
+            BirthDatedateTimePicker1 = new DateTimePicker();
+            label7 = new Label();
+            updatebutton1 = new Button();
+            removebutton2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)LessordataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -149,11 +156,69 @@
             rejisterButtonLessor.UseVisualStyleBackColor = true;
             rejisterButtonLessor.Click += Enterbutton1_Click;
             // 
+            // reserRejisterutton1
+            // 
+            reserRejisterutton1.Location = new Point(281, 256);
+            reserRejisterutton1.Name = "reserRejisterutton1";
+            reserRejisterutton1.Size = new Size(75, 23);
+            reserRejisterutton1.TabIndex = 13;
+            reserRejisterutton1.Text = "Reset";
+            reserRejisterutton1.UseVisualStyleBackColor = true;
+            reserRejisterutton1.Click += reserRejisterutton1_Click;
+            // 
+            // LessordataGridView1
+            // 
+            LessordataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            LessordataGridView1.Location = new Point(131, 312);
+            LessordataGridView1.Name = "LessordataGridView1";
+            LessordataGridView1.Size = new Size(240, 150);
+            LessordataGridView1.TabIndex = 14;
+            // 
+            // BirthDatedateTimePicker1
+            // 
+            BirthDatedateTimePicker1.Location = new Point(557, 256);
+            BirthDatedateTimePicker1.Name = "BirthDatedateTimePicker1";
+            BirthDatedateTimePicker1.Size = new Size(200, 23);
+            BirthDatedateTimePicker1.TabIndex = 15;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(496, 262);
+            label7.Name = "label7";
+            label7.Size = new Size(55, 15);
+            label7.TabIndex = 16;
+            label7.Text = "birthdate";
+            // 
+            // updatebutton1
+            // 
+            updatebutton1.Location = new Point(569, 312);
+            updatebutton1.Name = "updatebutton1";
+            updatebutton1.Size = new Size(75, 23);
+            updatebutton1.TabIndex = 17;
+            updatebutton1.Text = "update";
+            updatebutton1.UseVisualStyleBackColor = true;
+            // 
+            // removebutton2
+            // 
+            removebutton2.Location = new Point(419, 312);
+            removebutton2.Name = "removebutton2";
+            removebutton2.Size = new Size(75, 23);
+            removebutton2.TabIndex = 18;
+            removebutton2.Text = "Remove";
+            removebutton2.UseVisualStyleBackColor = true;
+            // 
             // LessorForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(removebutton2);
+            Controls.Add(updatebutton1);
+            Controls.Add(label7);
+            Controls.Add(BirthDatedateTimePicker1);
+            Controls.Add(LessordataGridView1);
+            Controls.Add(reserRejisterutton1);
             Controls.Add(rejisterButtonLessor);
             Controls.Add(passwordTextBox);
             Controls.Add(userNametextBox5);
@@ -169,6 +234,7 @@
             Controls.Add(label1);
             Name = "LessorForm";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)LessordataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -188,5 +254,11 @@
         private TextBox userNametextBox5;
         private TextBox passwordTextBox;
         private Button rejisterButtonLessor;
+        private Button reserRejisterutton1;
+        private DataGridView LessordataGridView1;
+        private DateTimePicker BirthDatedateTimePicker1;
+        private Label label7;
+        private Button updatebutton1;
+        private Button removebutton2;
     }
 }

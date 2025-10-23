@@ -1,4 +1,6 @@
-﻿using Rentpanel.Models;
+﻿using Rentpanel.Helpers;
+using Rentpanel.Models;
+using Rentpanel.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,13 +16,15 @@ namespace Rentpanel.Forms
 {
     public partial class LessorForm : Form
     {
-        // List<Lessor> lessors;
-        //private object lastNameTextBox;
-
+        LessorServices lessorServices;
         public LessorForm()
         {
             InitializeComponent();
-            //  lessors = new List<Lessor>();
+            lessorServices = new LessorServices();
+            
+            FillDataGridView(lessorServices.GetAll());
+
+
         }
 
         private void Enterbutton1_Click(object sender, EventArgs e)
@@ -33,27 +37,59 @@ namespace Rentpanel.Forms
             string phoneNumber = phoneNumbertextBox4.Text;
             string password = passwordTextBox.Text;
             string userName = userNametextBox5.Text;
+            DateTime birthDate = BirthDatedateTimePicker1.Value;
 
-            Lessor lessor = new Lessor(nationalCode: nationalCode, phoneNumber: phoneNumber)
+
+
+            if (!PhoneNumberHelper.IsValidPhoneNumber(phoneNumber))
             {
+                MessageBox.Show("please  enter true phonenumber");
+
+            }
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("please  enter true information");
+
+                return;
+            }
+            Lessor lessor = new Lessor(nationalCode: nationalCode, phoneNumber: phoneNumber, firstName, lastName, birthDate)
+            {
+
                 LastName = lastName,
                 FirstName = firstName,
+                Password = password,
+                Username = userName,
             };
             Lessor lessor1 = new Lessor(nationalCode: "", phoneNumber: "");
             lessor.CreatedAt = DateTime.Now;
+            lessor.BirthDate = DateTime.Now.AddDays(7);
 
+            lessorServices.Add(lessor);
+            FillDataGridView(lessorServices.GetAll());
 
-            lessor.FirstName = firstName;
-            lessor.LastName = lastName;
-            lessor.Password = password;
-           lessor.Username = userName;
+            ResetForm();
 
-            // lessors.Add(lessor);
-            // LessordataGridView1.DataSource = null;
-            // LessordataGridView1.DataSource= lessors;
-            //LessordataGridView1.Refresh();
+        }
+        private void FillDataGridView(List<Lessor> mylessors)
+        {
+            LessordataGridView1.DataSource = null;
+            LessordataGridView1.DataSource = mylessors;
+            LessordataGridView1.Refresh();
 
-
+        }
+        private void reserRejisterutton1_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+        }
+        private void ResetForm()
+        {
+            firstNametextBox1.Text = null;
+            lastnametextBox2.Text = null;
+            nationalIdtextBox3.Text = null;
+            phoneNumbertextBox4.Text = null;
+            userNametextBox5.Text = null;
+            passwordTextBox.Text = null;
         }
     }
 }
+

@@ -1,4 +1,5 @@
-﻿using Rentpanel.Models;
+﻿using Rentpanel.Enums;
+using Rentpanel.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,27 +44,44 @@ namespace Rentpanel.Forms
             string adress = AdressTextBox4.Text;
             string deliveryFullName = DeliveryFullNameTtextBox7.Text;
             string sendAt = SendAtTextBox6.Text;
-
-          
-            Order order = new Order(adress: adress , SendAt: sendAt)
+            //ino az ostad beprsdam
+            Order order = new Order(sendAt = sendAt, adress = adress)
             {
+                //chera inja CurrentPrice,Count,Product,Owner k  khata mikhornd ra dorost knm
+                // CurrentPrice = currentPrice,
                 DeliveryFullName = deliveryFullName,
-                DeliveryPhoneNumber =deliverPhoneNumber,
+                DeliveryPhoneNumber = deliverPhoneNumber,
+                //Count=count,
+                //Product=product,
+                //Owner=owner
+
             };
-            Order order1 = new Order(adress = "", sendAt = "");
+            //az ostad:chera sendat inja moshkel dare
+            // Order order1 = new Order(sendAt: "", adress: "");
+            //vaghti sendat drst shd byyd datagrid in form ro dorost knm
+
             order.CreatedAt = DateTime.Now;
-            string owner1 = owner;
-            // az ostad beprsam :
-            // chera inja nemitoonam oon masalan 
-            // Order.Owner = owner ;
-            // va Order Product = product ; 
-            // va baghiashun ro benevisam?
-            // va ike bayad alave bar constructori ke baraye sendat va adrees sakhtam yek constuctor ham baraye deliverphonenumber 
-            // va deliveru fullname benevisam 
-            // ama aya bayad oonha ro ham inja benevisam?
-            // in 2ta tamrin baraye safhe 21 hastand
+
+
+            ResetForm();
         }
 
+        private void resetrejisterbutton2_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+        }
+        private void ResetForm()
+        {
+
+            ownerTextBox1.Text = null;
+            CurrentPriceTextBox3.Text = null;
+            ProductTextBox2.Text = null;
+            DeliveryFullNameTtextBox7.Text = null;
+            CountTextBox5.Text = null;
+            AdressTextBox4.Text = null;
+            SendAtTextBox6.Text = null;
+            DeliveryFullNameTtextBox7.Text = null;
+        }
     }
 
 }

@@ -42,12 +42,12 @@
             label6 = new Label();
             registerButton = new Button();
             button2 = new Button();
-            dataGridView1 = new DataGridView();
-            birthdatedateTimePicker1 = new DateTimePicker();
+            OwnerdataGridView1 = new DataGridView();
+            birthdateTimePicker1 = new DateTimePicker();
             label7 = new Label();
-            button1 = new Button();
-            button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            removebutton1 = new Button();
+            updatebutton3 = new Button();
+            ((System.ComponentModel.ISupportInitialize)OwnerdataGridView1).BeginInit();
             SuspendLayout();
             // 
             // firstNameTextBox
@@ -164,59 +164,60 @@
             button2.TabIndex = 13;
             button2.Text = "reset";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // dataGridView1
+            // OwnerdataGridView1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(236, 305);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
-            dataGridView1.TabIndex = 14;
+            OwnerdataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            OwnerdataGridView1.Location = new Point(236, 305);
+            OwnerdataGridView1.Name = "OwnerdataGridView1";
+            OwnerdataGridView1.Size = new Size(240, 150);
+            OwnerdataGridView1.TabIndex = 14;
             // 
-            // birthdatedateTimePicker1
+            // birthdateTimePicker1
             // 
-            birthdatedateTimePicker1.Location = new Point(70, 256);
-            birthdatedateTimePicker1.Name = "birthdatedateTimePicker1";
-            birthdatedateTimePicker1.Size = new Size(200, 23);
-            birthdatedateTimePicker1.TabIndex = 15;
+            birthdateTimePicker1.Location = new Point(128, 256);
+            birthdateTimePicker1.Name = "birthdateTimePicker1";
+            birthdateTimePicker1.Size = new Size(200, 23);
+            birthdateTimePicker1.TabIndex = 15;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(9, 264);
+            label7.Location = new Point(49, 264);
             label7.Name = "label7";
             label7.Size = new Size(55, 15);
             label7.TabIndex = 16;
             label7.Text = "birthdate";
             // 
-            // button1
+            // removebutton1
             // 
-            button1.Location = new Point(571, 203);
-            button1.Name = "button1";
-            button1.Size = new Size(134, 23);
-            button1.TabIndex = 18;
-            button1.Text = "remove";
-            button1.UseVisualStyleBackColor = true;
+            removebutton1.Location = new Point(571, 203);
+            removebutton1.Name = "removebutton1";
+            removebutton1.Size = new Size(134, 23);
+            removebutton1.TabIndex = 18;
+            removebutton1.Text = "remove";
+            removebutton1.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // updatebutton3
             // 
-            button3.Location = new Point(412, 203);
-            button3.Name = "button3";
-            button3.Size = new Size(132, 23);
-            button3.TabIndex = 19;
-            button3.Text = "update";
-            button3.UseVisualStyleBackColor = true;
+            updatebutton3.Location = new Point(412, 203);
+            updatebutton3.Name = "updatebutton3";
+            updatebutton3.Size = new Size(132, 23);
+            updatebutton3.TabIndex = 19;
+            updatebutton3.Text = "update";
+            updatebutton3.UseVisualStyleBackColor = true;
             // 
             // OwnerForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 494);
-            Controls.Add(button3);
-            Controls.Add(button1);
+            Controls.Add(updatebutton3);
+            Controls.Add(removebutton1);
             Controls.Add(label7);
-            Controls.Add(birthdatedateTimePicker1);
-            Controls.Add(dataGridView1);
+            Controls.Add(birthdateTimePicker1);
+            Controls.Add(OwnerdataGridView1);
             Controls.Add(button2);
             Controls.Add(registerButton);
             Controls.Add(label6);
@@ -233,7 +234,7 @@
             Controls.Add(firstNameTextBox);
             Name = "OwnerForm";
             Text = "OwnerForm";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)OwnerdataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -254,10 +255,10 @@
         private Label label6;
         private Button registerButton;
         private Button button2;
-        private DataGridView dataGridView1;
-        private DateTimePicker birthdatedateTimePicker1;
+        private DataGridView OwnerdataGridView1;
+        private DateTimePicker birthdateTimePicker1;
         private Label label7;
-        private Button button1;
-        private Button button3;
+        private Button removebutton1;
+        private Button updatebutton3;
     }
 }

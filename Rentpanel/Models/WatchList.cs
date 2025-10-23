@@ -9,8 +9,8 @@ namespace Rentpanel.Models
 {
     internal class WatchList : BaseEntity
     {
-      //  public WatchList() : base()
-        //{ }
+        public WatchList() : base()
+        { }
         public Owner Owner { get; set; }     
         public Product Product { get; set; }
         public string Description { get; set; }

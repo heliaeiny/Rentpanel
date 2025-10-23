@@ -9,7 +9,8 @@ namespace Rentpanel.Models
 {
     internal class OrderItem : BaseEntity
     {
-        
+        public OrderItem() : base()
+        { }
         public Order Order { get; set; }
         public Product product { get; set; }
         public decimal CurrentPrice { get; set; }

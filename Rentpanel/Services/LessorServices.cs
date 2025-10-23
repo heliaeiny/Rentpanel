@@ -2,31 +2,24 @@
 using Rentpanel.Models;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Rentpanel.Services
 {
-
-    internal class OwnerService : BaseService<Owner>
+    internal class LessorServices :BaseService<Lessor>
     {
-        List<Owner> owners = new();
-        public void Add(Owner owner)
+        List<Lessor> lessors = new();
+
+        public void Add(Lessor lessor)
         {
-            owners.Add(owner);
+            lessors.Add(lessor);
+
         }
-        public List<Owner> GetAll()
+        public List<Lessor> GetAll()
         {
-            return owners;
+            return lessors;
         }
-
-
-
     }
-
-
-
 }
-

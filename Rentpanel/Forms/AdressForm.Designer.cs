@@ -45,7 +45,11 @@
             label7 = new Label();
             citylabel8 = new Label();
             registerbutton1 = new Button();
-            button2 = new Button();
+            resetRejisterbutton2 = new Button();
+            adressdataGridView1 = new DataGridView();
+            Removebutton1 = new Button();
+            updatebutton2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)adressdataGridView1).BeginInit();
             SuspendLayout();
             // 
             // alleytextBox
@@ -186,21 +190,52 @@
             registerbutton1.UseVisualStyleBackColor = true;
             registerbutton1.Click += registerbutton1_Click;
             // 
-            // button2
+            // resetRejisterbutton2
             // 
-            button2.Location = new Point(161, 221);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 17;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            resetRejisterbutton2.Location = new Point(161, 221);
+            resetRejisterbutton2.Name = "resetRejisterbutton2";
+            resetRejisterbutton2.Size = new Size(75, 23);
+            resetRejisterbutton2.TabIndex = 17;
+            resetRejisterbutton2.Text = "Reset";
+            resetRejisterbutton2.UseVisualStyleBackColor = true;
+            resetRejisterbutton2.Click += resetRejisterbutton2_Click;
+            // 
+            // adressdataGridView1
+            // 
+            adressdataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            adressdataGridView1.Location = new Point(268, 288);
+            adressdataGridView1.Name = "adressdataGridView1";
+            adressdataGridView1.Size = new Size(240, 150);
+            adressdataGridView1.TabIndex = 18;
+            // 
+            // Removebutton1
+            // 
+            Removebutton1.Location = new Point(291, 221);
+            Removebutton1.Name = "Removebutton1";
+            Removebutton1.Size = new Size(75, 23);
+            Removebutton1.TabIndex = 19;
+            Removebutton1.Text = "Remove";
+            Removebutton1.UseVisualStyleBackColor = true;
+            Removebutton1.Click += Removebutton1_Click;
+            // 
+            // updatebutton2
+            // 
+            updatebutton2.Location = new Point(395, 221);
+            updatebutton2.Name = "updatebutton2";
+            updatebutton2.Size = new Size(75, 23);
+            updatebutton2.TabIndex = 20;
+            updatebutton2.Text = "Update";
+            updatebutton2.UseVisualStyleBackColor = true;
             // 
             // AdressForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
+            Controls.Add(updatebutton2);
+            Controls.Add(Removebutton1);
+            Controls.Add(adressdataGridView1);
+            Controls.Add(resetRejisterbutton2);
             Controls.Add(registerbutton1);
             Controls.Add(citylabel8);
             Controls.Add(label7);
@@ -220,6 +255,7 @@
             Controls.Add(alleytextBox);
             Name = "AdressForm";
             Text = "Adress";
+            ((System.ComponentModel.ISupportInitialize)adressdataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -243,6 +279,9 @@
         private Label label7;
         private Label citylabel8;
         private Button registerbutton1;
-        private Button button2;
+        private Button resetRejisterbutton2;
+        private DataGridView adressdataGridView1;
+        private Button Removebutton1;
+        private Button updatebutton2;
     }
 }

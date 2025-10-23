@@ -1,5 +1,6 @@
 ﻿using Rentpanel.Abstraction;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,25 +10,60 @@ namespace Rentpanel.Models
 {
     internal class Owner : BaseEntity
     {
-        public Owner (string nationalCode , string phoneNumber, string lastName, string firstname)
-        { 
-         
-        
+        public Owner() : base()
+        { }
+        public Owner(string nationalCode, string phoneNumber)
+        {
+            if (string.IsNullOrEmpty(nationalCode) || string.IsNullOrEmpty(phoneNumber))
+            {
+                throw new Exception();
+            }
+            NationalCode = nationalCode;
+            phoneNumber = phoneNumber;
+
+        }
+        public Owner(string nationalCode,string phoneNumber,string firstname, string lastname ,DateTime birthDate):this(nationalCode,phoneNumber)
+        {
+           _birthDate= birthDate;
+            FirstName = firstname;
+            LastName = lastname;
+
+
         }
         
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string NationalId { get; set; }
+        public string NationalCode { get; set; }
         public string PhoneNumber { get; set; }
         public string Password { get; set; }
-        public string Username { get; set; }
+        public string UserName { get; set; }
 
-      //  private int _email;
-        //public int Email
-        //{
-          //  get { return _email; }
-            //set { _email = value; }
-        //}
+        public int Age
+        {
+            get
+            {
+
+                if (_birthDate == DateTime.MinValue)
+                {
+                    throw new Exception();
+                }
+                return DateTime.Now.Year - -BirthDate.Year;
+
+            }
+        }
+        private int _email;
+        public int Email
+        {
+            get { return _email; }
+            set { _email = value; }
+        }
+
+        private DateTime _birthDate;
+        public DateTime BirthDate
+        {
+            get { return _birthDate; }
+            set { _birthDate = value; }
+        }
     }
 
 

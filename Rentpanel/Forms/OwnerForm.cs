@@ -1,6 +1,7 @@
-﻿using Rentpanel.Helpers;
-using Rentpanel.Models;
-using Rentpanel.Services;
+﻿using BaseBackend.Models;
+using BaseBackend.Services;
+using Rentpanel.Helpers;
+
 
 
 namespace Rentpanel.Forms;
@@ -30,6 +31,7 @@ public partial class OwnerForm : Form
         string password = passwordtextBox5.Text;
         string userName = userNametextBox6.Text;
 
+        nationalCode.FormatNationalCode();
         DateTime birthDate = birthdateTimePicker1.Value;
 
         if (!PhoneNumberHelper.IsValidPhoneNumber(phoneNumber))

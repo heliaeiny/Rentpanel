@@ -16,5 +16,8 @@ internal static class NationalCodeHelper
 
     }
 
-
+    public static string  FormatNationalCode(this string FormatNationalCode)
+    {
+        return FormatNationalCode ;
+    }
 }

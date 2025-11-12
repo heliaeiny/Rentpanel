@@ -1,16 +1,17 @@
-﻿using Rentpanel.InterFace;
-using Rentpanel.Models;
+﻿using BaseBackend.Interface;
+using BaseBackend.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaseBackend.Interface;
 
-namespace Rentpanel.Services
+namespace BaseBackend.Services
 {
 
-    internal class OwnerService : BaseService<Owner>
+    public class OwnerService : BaseService<Owner>
     {
         List<Owner> owners = new();
         public void Add(Owner owner)

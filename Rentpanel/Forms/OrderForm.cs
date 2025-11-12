@@ -1,5 +1,5 @@
-﻿using Rentpanel.Enums;
-using Rentpanel.Models;
+﻿using BaseBackend.Enums;
+using BaseBackend.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,7 +48,7 @@ namespace Rentpanel.Forms
             Order order = new Order(sendAt = sendAt, adress = adress)
             {
                 //chera inja CurrentPrice,Count,Product,Owner k  khata mikhornd ra dorost knm
-                // CurrentPrice = currentPrice,
+               // CurrentPrice = currentPrice,
                 DeliveryFullName = deliveryFullName,
                 DeliveryPhoneNumber = deliverPhoneNumber,
                 //Count=count,

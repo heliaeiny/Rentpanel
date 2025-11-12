@@ -32,7 +32,7 @@
             PasswordTextBox2 = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            registerbutton1 = new Button();
+            Registerbutton1 = new Button();
             resetRejisterButton2 = new Button();
             removebutton1 = new Button();
             updatebutton2 = new Button();
@@ -71,15 +71,15 @@
             label2.Text = "Password";
             label2.Click += label2_Click;
             // 
-            // registerbutton1
+            // Registerbutton1
             // 
-            registerbutton1.Location = new Point(191, 186);
-            registerbutton1.Name = "registerbutton1";
-            registerbutton1.Size = new Size(75, 23);
-            registerbutton1.TabIndex = 4;
-            registerbutton1.Text = "Enter";
-            registerbutton1.UseVisualStyleBackColor = true;
-            registerbutton1.Click += registerbutton1_Click;
+            Registerbutton1.Location = new Point(191, 186);
+            Registerbutton1.Name = "Registerbutton1";
+            Registerbutton1.Size = new Size(75, 23);
+            Registerbutton1.TabIndex = 4;
+            Registerbutton1.Text = "Enter";
+            Registerbutton1.UseVisualStyleBackColor = true;
+            Registerbutton1.Click += registerbutton1_Click;
             // 
             // resetRejisterButton2
             // 
@@ -117,7 +117,7 @@
             Controls.Add(updatebutton2);
             Controls.Add(removebutton1);
             Controls.Add(resetRejisterButton2);
-            Controls.Add(registerbutton1);
+            Controls.Add(Registerbutton1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(PasswordTextBox2);
@@ -134,7 +134,7 @@
         private TextBox PasswordTextBox2;
         private Label label1;
         private Label label2;
-        private Button registerbutton1;
+        private Button Registerbutton1;
         private Button resetRejisterButton2;
         private Button removebutton1;
         private Button updatebutton2;

@@ -1,14 +1,14 @@
-﻿using Rentpanel.InterFace;
-using Rentpanel.Models;
+﻿using BaseBackend.Interface;
+using BaseBackend.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rentpanel.Services
+namespace BaseBackend.Services
 {
-    internal class LessorServices :BaseService<Lessor>
+    public class LessorServices :BaseService<Lessor>
     {
         List<Lessor> lessors = new();
 

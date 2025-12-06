@@ -255,6 +255,7 @@
             Controls.Add(alleytextBox);
             Name = "AdressForm";
             Text = "Adress";
+            Load += AdressForm_Load;
             ((System.ComponentModel.ISupportInitialize)adressdataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

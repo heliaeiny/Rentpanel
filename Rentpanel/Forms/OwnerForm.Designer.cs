@@ -45,7 +45,7 @@
             OwnerdataGridView1 = new DataGridView();
             birthdateTimePicker1 = new DateTimePicker();
             label7 = new Label();
-            removebutton1 = new Button();
+            DeleteButton1 = new Button();
             updatebutton3 = new Button();
             ((System.ComponentModel.ISupportInitialize)OwnerdataGridView1).BeginInit();
             SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             // lastNameTextBox
             // 
-            lastNameTextBox.Location = new Point(509, 39);
+            lastNameTextBox.Location = new Point(621, 42);
             lastNameTextBox.Name = "lastNameTextBox";
             lastNameTextBox.Size = new Size(100, 23);
             lastNameTextBox.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             // nationalCodeTextBox
             // 
-            nationalCodeTextBox.Location = new Point(509, 92);
+            nationalCodeTextBox.Location = new Point(621, 95);
             nationalCodeTextBox.Name = "nationalCodeTextBox";
             nationalCodeTextBox.Size = new Size(100, 23);
             nationalCodeTextBox.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             // userNametextBox6
             // 
-            userNametextBox6.Location = new Point(509, 147);
+            userNametextBox6.Location = new Point(621, 150);
             userNametextBox6.Name = "userNametextBox6";
             userNametextBox6.Size = new Size(100, 23);
             userNametextBox6.TabIndex = 5;
@@ -104,7 +104,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(432, 47);
+            label2.Location = new Point(523, 50);
             label2.Name = "label2";
             label2.Size = new Size(60, 15);
             label2.TabIndex = 7;
@@ -122,7 +122,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(412, 95);
+            label4.Location = new Point(503, 103);
             label4.Name = "label4";
             label4.Size = new Size(80, 15);
             label4.TabIndex = 9;
@@ -140,7 +140,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(430, 160);
+            label6.Location = new Point(521, 153);
             label6.Name = "label6";
             label6.Size = new Size(62, 15);
             label6.TabIndex = 11;
@@ -169,16 +169,18 @@
             // OwnerdataGridView1
             // 
             OwnerdataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            OwnerdataGridView1.Location = new Point(236, 305);
+            OwnerdataGridView1.Location = new Point(60, 305);
             OwnerdataGridView1.Name = "OwnerdataGridView1";
-            OwnerdataGridView1.Size = new Size(240, 150);
+            OwnerdataGridView1.Size = new Size(661, 150);
             OwnerdataGridView1.TabIndex = 14;
+            OwnerdataGridView1.CellClick += OwnerdataGridView1_CellClick;
+            OwnerdataGridView1.CellContentClick += OwnerdataGridView1_CellContentClick;
             // 
             // birthdateTimePicker1
             // 
             birthdateTimePicker1.Location = new Point(128, 256);
             birthdateTimePicker1.Name = "birthdateTimePicker1";
-            birthdateTimePicker1.Size = new Size(200, 23);
+            birthdateTimePicker1.Size = new Size(593, 23);
             birthdateTimePicker1.TabIndex = 15;
             // 
             // label7
@@ -190,14 +192,15 @@
             label7.TabIndex = 16;
             label7.Text = "birthdate";
             // 
-            // removebutton1
+            // DeleteButton1
             // 
-            removebutton1.Location = new Point(571, 203);
-            removebutton1.Name = "removebutton1";
-            removebutton1.Size = new Size(134, 23);
-            removebutton1.TabIndex = 18;
-            removebutton1.Text = "remove";
-            removebutton1.UseVisualStyleBackColor = true;
+            DeleteButton1.Location = new Point(587, 203);
+            DeleteButton1.Name = "DeleteButton1";
+            DeleteButton1.Size = new Size(134, 23);
+            DeleteButton1.TabIndex = 18;
+            DeleteButton1.Text = "Delete";
+            DeleteButton1.UseVisualStyleBackColor = true;
+            DeleteButton1.Click += DeleteButton1_Click;
             // 
             // updatebutton3
             // 
@@ -207,6 +210,7 @@
             updatebutton3.TabIndex = 19;
             updatebutton3.Text = "update";
             updatebutton3.UseVisualStyleBackColor = true;
+            updatebutton3.Click += updatebutton3_Click;
             // 
             // OwnerForm
             // 
@@ -214,7 +218,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 494);
             Controls.Add(updatebutton3);
-            Controls.Add(removebutton1);
+            Controls.Add(DeleteButton1);
             Controls.Add(label7);
             Controls.Add(birthdateTimePicker1);
             Controls.Add(OwnerdataGridView1);
@@ -234,6 +238,7 @@
             Controls.Add(firstNameTextBox);
             Name = "OwnerForm";
             Text = "OwnerForm";
+            Load += OwnerForm_Load;
             ((System.ComponentModel.ISupportInitialize)OwnerdataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -258,7 +263,7 @@
         private DataGridView OwnerdataGridView1;
         private DateTimePicker birthdateTimePicker1;
         private Label label7;
-        private Button removebutton1;
+        private Button DeleteButton1;
         private Button updatebutton3;
     }
 }

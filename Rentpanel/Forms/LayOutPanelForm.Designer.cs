@@ -130,6 +130,7 @@
             MainMenuStrip = menuStrip1;
             Name = "LayOutPanelForm";
             Text = "agm";
+            Load += LayOutPanelForm_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

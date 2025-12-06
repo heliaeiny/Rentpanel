@@ -46,5 +46,10 @@ namespace Rentpanel.Forms
             AdressForm adressForm = new AdressForm();
             adressForm.ShowDialog();
         }
+
+        private void LayOutPanelForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

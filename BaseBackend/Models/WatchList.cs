@@ -11,7 +11,10 @@ public class WatchList : BaseEntity
     public WatchList() : base()
     { }
     public Owner Owner { get; set; }     
+    public int OwnerId { get; set; }
     public Product Product { get; set; }
+    public int ProductId { get; set; }
+
     public string Description { get; set; }
     
 

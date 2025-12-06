@@ -1,24 +1,28 @@
 ﻿using BaseBackend.Interface;
 using BaseBackend.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+namespace BaseBackend.Services;
 
-namespace BaseBackend.Services
-{
-    public class ProductService : BaseService<Product>
-    { 
+public class ProductService : IBaseService<Product>
+{ 
 
 
-        public void Add(Product item)
-        {
-            throw new NotImplementedException();
-        }
-        public List<Product> GetAll()
-        {
-            throw new NotImplementedException();
-        }
+    public void Add(Product item)
+    {
+        
+    }
+
+    public void Delete(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<Product> GetAll()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Update(Product item)
+    {
+        throw new NotImplementedException();
     }
 }

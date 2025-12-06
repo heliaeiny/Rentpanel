@@ -12,7 +12,9 @@ public class Lessor : BaseEntity
     {
         if(string.IsNullOrEmpty(nationalCode) || string.IsNullOrEmpty(phoneNumber))
         {
-            throw new Exception();
+            
+           throw new Exception();
+           
         }
         NationalCode = nationalCode;
         phoneNumber = phoneNumber;
@@ -46,8 +48,8 @@ public class Lessor : BaseEntity
         }
     }
 
-      private int _email;
-      public int Email
+      private string  _email;
+      public string Email
       {
           get { return _email; }
           set { _email = value; }

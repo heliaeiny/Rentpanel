@@ -10,10 +10,10 @@ public class Owner : BaseEntity
     public Owner(string nationalCode, string phoneNumber)
     {
         if (string.IsNullOrEmpty(nationalCode) || string.IsNullOrEmpty(phoneNumber))
-        {
-            throw new Exception();
+        {//throw new Exception();
+            Console.WriteLine("please enter your nationalcode and phonenumber in valid form");            
         }
-        NationalCode = nationalCode;
+        //NationalCode = nationalCode;
         phoneNumber = phoneNumber;
 
     }
@@ -33,21 +33,10 @@ public class Owner : BaseEntity
     public string Password { get; set; }
     public string UserName { get; set; }
 
-    public int Age
-    {
-        get
-        {
-
-            if (_birthDate == DateTime.MinValue)
-            {
-                throw new Exception();
-            }
-            return DateTime.Now.Year - -BirthDate.Year;
-
-        }
-    }
-    private int _email;
-    public int Email
+    
+    
+    private string _email;
+    public string Email
     {
         get { return _email; }
         set { _email = value; }

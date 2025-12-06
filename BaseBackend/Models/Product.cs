@@ -23,6 +23,7 @@ public class Product : BaseEntity
     public string Code { get; set; }
     public bool IsSellable { get; set; }
     public decimal Price { get; set; }
-
+   public CodeTakhfif CodeTakhfif { get; set; }
+    public int CodeTakhfifId { get; set; }
 
 }

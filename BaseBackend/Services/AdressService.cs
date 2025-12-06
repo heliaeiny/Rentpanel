@@ -1,28 +1,28 @@
 ﻿using BaseBackend.Interface;
 using BaseBackend.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BaseBackend.Services
+namespace BaseBackend.Services;
+
+public class AdressService : IBaseService<Adress>
 {
-    public class AdressService : BaseService<Adress>
+    List<Adress> adresses = new();
+    public void Add(Adress address)
     {
-        List<Adress> adresses = new();
-        public void Add(Adress address)
-        {
-            adresses.Add(address);
-        }
-        public List<Adress> GetAll()
-        {
-            return adresses;
-        }
+        adresses.Add(address);
+    }
 
+    public void Delete(int id)
+    {
+        throw new NotImplementedException();
+    }
 
+    public List<Adress> GetAll()
+    {
+        return adresses;
+    }
 
-
+    public void Update(Adress item)
+    {
+        throw new NotImplementedException();
     }
 }
